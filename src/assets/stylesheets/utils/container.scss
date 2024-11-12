@@ -1,0 +1,36 @@
+@use './breakpoints' as *;
+
+.container,
+.container--medium,
+.container--small {
+  margin: 0 auto;
+  padding-left: 0.93rem;
+  padding-right: 0.93rem;
+}
+
+.container {
+  max-width: 87.5rem;
+
+  &--small {
+    max-width: 50rem;
+  }
+
+  &--medium {
+    max-width: 64rem;
+  }
+}
+
+.container--content {
+  padding-left: 0;
+  padding-right: 0;
+
+  @include breakpoint-tablet {
+    padding-left: 0.93rem;
+    padding-right: 0.93rem;
+  }
+
+  @include breakpoint-desktop {
+    padding-left: 0.93rem;
+    padding-right: 0.93rem;
+  }
+}

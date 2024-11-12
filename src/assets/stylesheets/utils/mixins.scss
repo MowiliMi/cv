@@ -1,0 +1,8 @@
+@use '@/assets/stylesheets/variables' as *;
+
+@mixin shadowContainer {
+  box-shadow: $box-shadow-primary;
+  border-radius: $radius-primary;
+  background-color: $color-white;
+  padding: 1.5rem;
+}

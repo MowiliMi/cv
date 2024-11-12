@@ -1,0 +1,52 @@
+{
+  "name": "@MowiliMi/cv",
+  "version": "12.11.2024",
+  "description": "Kamil Grabowski – Curriculum Vitae",
+  "author": "Kamil Grabowski <kamilll.grabowski@gmail.com>",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "deploy": "gh-pages -d dist",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force",
+    "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
+    "lint:eslint": "eslint . --fix",
+    "lint": "run-s lint:*",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "@unhead/vue": "^1.11.11",
+    "@vueuse/head": "^2.0.0",
+    "html-pdf-node": "^1.0.8",
+    "normalize.css": "^8.0.1",
+    "vue": "^3.5.12",
+    "vue-i18n": "^10.0.4",
+    "vue-router": "^4.4.5",
+    "vue3-html2pdf": "^1.1.2",
+    "vue3-simple-html2pdf": "^0.0.7"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.9.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/eslint-config-prettier": "^10.1.0",
+    "@vue/eslint-config-typescript": "^14.1.3",
+    "@vue/tsconfig": "^0.5.1",
+    "eslint": "^9.14.0",
+    "eslint-plugin-oxlint": "^0.11.0",
+    "eslint-plugin-vue": "^9.30.0",
+    "gh-pages": "^6.2.0",
+    "npm-run-all2": "^7.0.1",
+    "oxlint": "^0.11.0",
+    "prettier": "^3.3.3",
+    "sass": "^1.80.6",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.10",
+    "vite-plugin-vue-devtools": "^7.5.4",
+    "vite-svg-loader": "^5.1.0",
+    "vue-tsc": "^2.1.10"
+  }
+}

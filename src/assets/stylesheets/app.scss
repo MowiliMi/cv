@@ -1,0 +1,35 @@
+@use './utils/container' as *;
+@use './variables' as *;
+
+@import 'normalize.css/normalize.css';
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-size: $font-size-primary;
+    color: $color-black;
+    background-color: $white-background;
+}
+
+#app {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto auto;
+    grid-template-columns: 100%;
+}

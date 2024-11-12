@@ -1,0 +1,13 @@
+// 768px
+@mixin breakpoint-tablet {
+  @media screen and (min-width: 48em) {
+    @content;
+  }
+}
+
+// 1200px
+@mixin breakpoint-desktop {
+  @media screen and (min-width: 75em) {
+    @content;
+  }
+}
