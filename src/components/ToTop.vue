@@ -28,7 +28,7 @@ export default defineComponent({
 
 .top {
   position: fixed;
-  display: none;
+  display: grid;
   justify-content: center;
   align-items: center;
   background-color: $dark-background;
@@ -44,18 +44,8 @@ export default defineComponent({
   bottom: 1.5rem;
   cursor: pointer;
 
-  @include breakpoint-tablet {
-    display: grid;
-  }
-
   &:hover {
     opacity: 1;
   }
-
-  // svg {
-  //   width: 1.8rem;
-  //   fill: $color-secondary;
-  //   cursor: pointer;
-  // }
 }
 </style>

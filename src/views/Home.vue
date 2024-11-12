@@ -8,6 +8,7 @@
       </div>
       <AppFooter />
     </div>
+    <ToTop />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import AppHeader from '@/components/header/Header.vue';
 import AppExperience from '@/components/Experience.vue';
 import AppSkills from '@/components/Skills.vue';
 import AppFooter from '@/components/Footer.vue';
+import ToTop from '@/components/ToTop.vue';
 
 export default defineComponent({
   name: 'AppHomepage',
@@ -26,6 +28,7 @@ export default defineComponent({
     AppExperience,
     AppSkills,
     AppFooter,
+    ToTop,
   },
   setup() {
     useAppMeta({});
