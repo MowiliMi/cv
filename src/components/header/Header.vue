@@ -49,18 +49,17 @@ export default defineComponent({
 <style lang="scss" scoped>
 @use '@/assets/stylesheets/variables' as *;
 @use '@/assets/stylesheets/utils/container' as *;
+@use '@/assets/stylesheets/utils/breakpoints' as *;
 
 .header {
   position: relative;
   display: grid;
   background-color: $dark-background;
-  border-radius: 0.5rem;
   padding: 1.5rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   color: $color-white;
   z-index: 1;
   margin-bottom: 3rem;
-  margin-top: 1rem;
 
   &:before {
     position: absolute;
@@ -69,6 +68,16 @@ export default defineComponent({
     width: 100%;
     height: 100%;
     opacity: 0.1;
+  }
+
+  @include breakpoint-tablet {
+    grid-template-columns: 1fr;
+  }
+
+  @include breakpoint-desktop {
+    margin-top: 1rem;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 0.5rem;
   }
 }
 </style>

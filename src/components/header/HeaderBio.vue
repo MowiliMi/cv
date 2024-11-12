@@ -38,6 +38,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @use '@/assets/stylesheets/variables' as *;
+@use '@/assets/stylesheets/utils/breakpoints' as *;
 
 .bio {
   display: grid;
@@ -46,18 +47,37 @@ export default defineComponent({
 
   &__block {
     display: grid;
-    grid-template-columns: 8rem 1fr;
+    grid-template-columns: 4rem 1fr;
     grid-column-gap: 1.5rem;
     align-items: center;
     margin-bottom: 1.5rem;
 
+    @include breakpoint-tablet {
+      grid-template-columns: 6rem 1fr;
+    }
+
+    @include breakpoint-desktop {
+      grid-template-columns: 8rem 1fr;
+    }
+
     &-photo {
       position: relative;
       background: url('@/assets/images/me.webp') center/cover;
-      width: 8rem;
-      height: 8rem;
+      width: 5rem;
+      height: 5rem;
       border-radius: 50%;
-      border: 0.3rem solid $color-white;
+      border: 0.2rem solid $color-white;
+
+      @include breakpoint-tablet {
+        width: 6rem;
+        height: 6rem;
+        border: 0.3rem solid $color-white;
+      }
+
+      @include breakpoint-desktop {
+        width: 8rem;
+        height: 8rem;
+      }
     }
 
     &-text {
@@ -69,22 +89,42 @@ export default defineComponent({
       }
 
       .name {
-        font-size: 2.8rem;
-        line-height: 3.2rem;
+        font-size: 1.5rem;
+        line-height: 2.2rem;
         font-weight: 700;
         height: fit-content;
         margin: 0;
         padding: 0;
+
+        @include breakpoint-tablet {
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+        }
+
+        @include breakpoint-desktop {
+          font-size: 2.8rem;
+          line-height: 3.2rem;
+        }
       }
 
       .specialization {
         position: relative;
         margin: 0;
         padding: 0;
-        font-size: 2rem;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
         color: $color-secondary;
-        line-height: 3.2rem;
         width: fit-content;
+
+        @include breakpoint-tablet {
+          font-size: 1.4rem;
+          line-height: 2.2rem;
+        }
+
+        @include breakpoint-desktop {
+          font-size: 2rem;
+          line-height: 3.2rem;
+        }
       }
     }
   }

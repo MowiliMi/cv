@@ -4,7 +4,7 @@
     class="contact"
   >
     <div
-      class="name"
+      class="contact__name"
       v-for="(item, index) of items"
       :key="index"
     >
@@ -67,25 +67,45 @@ export default defineComponent({
 @use 'sass:color';
 
 @use '@/assets/stylesheets/variables' as *;
+@use '@/assets/stylesheets/utils/breakpoints' as *;
 
 .contact {
   display: grid;
   height: fit-content;
   grid-row-gap: 1rem;
   z-index: 1;
+  margin-top: 1.5rem;
 
-  .name {
+  @include breakpoint-tablet {
+    margin-top: 0;
+  }
+
+  @include breakpoint-desktop {
+    margin-top: 0;
+  }
+
+  &__name {
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, auto);
     justify-content: flex-end;
     align-items: center;
     grid-column-gap: 1.5rem;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
+    font-size: 0.9rem;
+    line-height: 1rem;
     text-align: right;
     color: $color-white;
     text-decoration: none;
+
+    @include breakpoint-tablet {
+      font-size: 1rem;
+      line-height: 1.2rem;
+    }
+
+    @include breakpoint-desktop {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+    }
 
     a {
       display: inline;

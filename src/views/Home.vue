@@ -3,8 +3,8 @@
     <div class="container container--content">
       <AppHeader />
       <div class="content">
-        <AppExperience />
         <AppSkills />
+        <AppExperience />
       </div>
       <AppFooter />
     </div>
@@ -34,11 +34,17 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@use '@/assets/stylesheets/utils/breakpoints' as *;
+
 .home {
   .content {
     display: grid;
-    grid-template-columns: 45rem 1fr;
+    grid-template-columns: 1fr;
     grid-column-gap: 1.5rem;
+
+    @include breakpoint-desktop {
+      grid-template-columns: 45rem 1fr;
+    }
   }
 }
 </style>

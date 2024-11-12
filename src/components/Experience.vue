@@ -57,6 +57,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @use '@/assets/stylesheets/variables' as *;
+@use '@/assets/stylesheets/utils/breakpoints' as *;
 
 .experience {
   &__items {
@@ -103,21 +104,36 @@ export default defineComponent({
           position: relative;
           display: inline-block;
           margin-bottom: 0.8rem;
-          font-size: 1.2rem;
+
+          font-size: 0.9rem;
           font-weight: 700;
           background-color: $dark-background;
           border-radius: $radius-primary;
           padding: 0.2rem 0.5rem;
           color: $color-white;
 
+          @include breakpoint-tablet {
+            font-size: 1rem;
+          }
+
+          @include breakpoint-desktop {
+            font-size: 1.2rem;
+          }
+
           &__date {
             position: absolute;
             font-size: $font-size-primary;
+            font-size: 1rem;
             font-weight: 700;
             color: $color-black;
             opacity: 0.5;
-            right: -9.2rem;
+            right: -9.5rem;
             top: 0.45rem;
+            display: none;
+
+            @include breakpoint-desktop {
+              display: block;
+            }
           }
         }
 

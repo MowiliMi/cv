@@ -34,14 +34,19 @@ export default defineComponent({
 @use 'sass:color';
 
 @use '@/assets/stylesheets/variables' as *;
+@use '@/assets/stylesheets/utils/breakpoints' as *;
 
 .footer {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: 1fr;
   grid-column-gap: 0.5rem;
   padding: 5rem 2rem;
+
+  @include breakpoint-tablet {
+    grid-template-columns: repeat(3, auto);
+  }
 
   .code {
     font-weight: 700;
