@@ -97,6 +97,7 @@ export default defineComponent({
         &.is-last .name {
           &__date {
             right: -4.5rem;
+            display: block;
           }
         }
 
