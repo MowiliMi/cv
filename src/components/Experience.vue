@@ -60,6 +60,12 @@ export default defineComponent({
 @use '@/assets/stylesheets/utils/breakpoints' as *;
 
 .experience {
+  margin-top: 1rem;
+
+  @include breakpoint-tablet {
+    margin-top: 0;
+  }
+
   &__items {
     ul {
       position: relative;
@@ -86,12 +92,16 @@ export default defineComponent({
         &:before {
           position: absolute;
           content: '';
-          left: -0.3rem;
-          top: 2.2rem;
+          left: -0.4rem;
+          top: 2rem;
           width: 1rem;
           height: 1rem;
           border-radius: 50%;
           background-color: $dark-background;
+
+          @include breakpoint-desktop {
+            top: 2.2rem;
+          }
         }
 
         &.is-last .name {
