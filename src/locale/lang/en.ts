@@ -105,7 +105,7 @@ export default {
       date: '09.2009/05.2011',
       position: 'Web developer',
       description:
-        'Leveraged arketing channels social media, content marketing, to enhance brand awareness and customer engagement, resulting in higher sales.',
+        'Leveraged marketing channels social media, content marketing, to enhance brand awareness and customer engagement, resulting in higher sales.',
       tags: ['Marketing', 'HTML', 'PHP', 'SEO'],
     },
     {
