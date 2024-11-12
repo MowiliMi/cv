@@ -59,7 +59,11 @@ export default defineComponent({
   grid-template-columns: 1fr;
   color: $color-white;
   z-index: 1;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+
+  @include breakpoint-desktop {
+    margin-bottom: 3rem;
+  }
 
   &:before {
     position: absolute;
